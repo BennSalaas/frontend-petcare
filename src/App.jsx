@@ -56,8 +56,9 @@ function App() {
     const cargarDuenos = async () => {
       try {
         setDuenos(await obtenerDuenos());
-      } catch {
-        mostrarAlerta('error', 'No se pudo conectar con el backend. Verifica que Spring Boot esté corriendo en el puerto 8080.');
+      } catch (error) {
+        console.error(error);
+        mostrarAlerta('error', `No se pudo cargar los dueños: ${error.message}${error.response ? ` (HTTP ${error.response.status})` : ''}`);
       }
     };
     cargarDuenos();

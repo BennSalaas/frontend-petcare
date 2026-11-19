@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8080/api';
+const API_URL = '/api';
 
 // --- DUEÑOS ---
 export const obtenerDuenos = async () => {
-    const responses = await axios.get(`${API_URL}/duenos`);
+    const response = await axios.get(`${API_URL}/duenos`);
     return response.data;
 };
 
@@ -14,10 +14,6 @@ export const crearDueno = async (dueno) => {
 };
 
 // --- MASCOTAS ---
-export const eliminarMascota = async (id) => {
-    await axios.delete(`${API_URL}/mascotas/${id}`);
-};
-
 export const obtenerMascotasPorDueno = async (duenoId) => {
     const response = await axios.get(`${API_URL}/duenos/${duenoId}/mascotas`);
     return response.data;
@@ -28,17 +24,21 @@ export const crearMascota = async (mascota, duenoId) => {
     return response.data;
 };
 
+export const eliminarMascota = async (id) => {
+    await axios.delete(`${API_URL}/mascotas/${id}`);
+};
+
 // --- CITAS ---
 export const obtenerCitasPorMascota = async (mascotaId) => {
     const response = await axios.get(`${API_URL}/mascotas/${mascotaId}/citas`);
     return response.data;
 };
 
-export const eliminarCita = async (id) => {
-    await axios.delete(`${API_URL}/citas/${id}`);
-};
-
 export const crearCita = async (cita, mascotaId) => {
     const response = await axios.post(`${API_URL}/citas?mascotaId=${mascotaId}`, cita);
     return response.data;
+};
+
+export const eliminarCita = async (id) => {
+    await axios.delete(`${API_URL}/citas/${id}`);
 };
