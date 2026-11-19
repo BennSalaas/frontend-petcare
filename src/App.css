@@ -175,3 +175,90 @@
   margin-bottom: 8px;
   font-size: 0.88rem;
 }
+/* ---- Formularios de registro (dueños y mascotas) ---- */
+.btn-secundario {
+  background: transparent;
+  color: #0d9488;
+  border: 1px dashed #0d9488;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 12px;
+  transition: background-color 0.2s;
+}
+
+.btn-secundario:hover {
+  background-color: rgba(13, 148, 136, 0.1);
+}
+
+.formulario-nuevo {
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-top: 14px;
+}
+
+.formulario-nuevo h3 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+  color: #0f766e;
+}
+
+.formulario-nuevo .formulario {
+  margin-top: 6px;
+}
+
+.acciones-form {
+  display: flex;
+  gap: 8px;
+}
+
+.acciones-form .btn-primario {
+  flex: 1;
+}
+
+.btn-cancelar {
+  background: transparent;
+  color: #64748b;
+  border: 1px solid #cbd5e1;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.btn-cancelar:hover {
+  background-color: rgba(100, 116, 139, 0.12);
+}
+
+/* ---- Botón eliminar ---- */
+.tarjeta-cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-eliminar {
+  background: transparent;
+  color: #dc2626;
+  border: 1px solid #dc2626;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: background-color 0.2s;
+}
+
+.tarjeta-cabecera .btn-eliminar {
+  margin-top: 0;
+}
+
+.btn-eliminar:hover {
+  background-color: rgba(220, 38, 38, 0.12);
+}
